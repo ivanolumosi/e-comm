@@ -8,14 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const updateForm = document.getElementById("update-form");
     const cancelUpdateButton = document.getElementById("cancel-update");
     const cartItems = document.querySelector(".cartitems");
-    if (!myform || !productForm || !myproducts || !productTable || !updateForm || !cancelUpdateButton) {
+    if (!myform || !productForm || !myproducts || !productTable || !updateForm || !cancelUpdateButton || !cartItems) {
         console.error("One or more elements not found");
         return;
     }
     adminButton.addEventListener("click", () => {
-        if (myform) {
-            myform.classList.toggle("hidden");
-        }
+        myform.classList.toggle("hidden");
     });
     productForm.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -62,29 +60,28 @@ document.addEventListener("DOMContentLoaded", () => {
             .then((products) => {
             myproducts.innerHTML = "";
             productTable.innerHTML = "";
-            products.forEach((product) => {
+            products.forEach(product => {
                 const productInfo = document.createElement("div");
                 productInfo.innerHTML = `
-                        <p>${product.name}</p>
-                        <h3>Ksh ${product.price}</h3>
-                        <p>${product.date}</p>
-                        <img src="${product.image}" alt="${product.name}" width="100" height="100">
-                        <button class="update-button">ADD</button>
-                        
-                    `;
+                    <p>${product.name}</p>
+                    <h3>Ksh ${product.price}</h3>
+                    <p>${product.date}</p>
+                    <img src="${product.image}" alt="${product.name}" width="100" height="100">
+                    <button class="add-button" data-id="${product.id}">ADD</button>
+                `;
                 myproducts.appendChild(productInfo);
                 const newRow = productTable.insertRow();
                 newRow.innerHTML = `
-                        <td>${product.name}</td>
-                        <td>${product.price}</td>
-                        <td>${product.date}</td>
-                        <td><img src="${product.image}" alt="${product.name}" width="50" height="50"></td>
-                        <td><button class="update-button" data-id="${product.id}">Update</button></td>
-                        <td><button class="delete-button" data-id="${product.id}">Delete</button></td>
-                    `;
+                    <td>${product.name}</td>
+                    <td>${product.price}</td>
+                    <td>${product.date}</td>
+                    <td><img src="${product.image}" alt="${product.name}" width="50" height="50"></td>
+                    <td><button class="update-button" data-id="${product.id}">Update</button></td>
+                    <td><button class="delete-button" data-id="${product.id}">Delete</button></td>
+                `;
             });
             document.querySelectorAll(".delete-button").forEach(button => {
-                button.addEventListener("click", (event) => {
+                button.addEventListener("click", event => {
                     const id = event.target.dataset.id;
                     if (id) {
                         deleteProduct(id);
@@ -95,11 +92,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
             document.querySelectorAll(".update-button").forEach(button => {
-                button.addEventListener("click", (event) => {
+                button.addEventListener("click", event => {
                     const id = event.target.dataset.id;
                     if (id) {
                         currentUpdateId = id;
                         prepareUpdateForm(id);
+                    }
+                    else {
+                        console.error("Product ID not found");
+                    }
+                });
+            });
+            document.querySelectorAll(".add-button").forEach(button => {
+                button.addEventListener("click", event => {
+                    const id = event.target.dataset.id;
+                    if (id) {
+                        addToCart(id);
                     }
                     else {
                         console.error("Product ID not found");
@@ -175,9 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (cancelUpdateButton) {
         cancelUpdateButton.addEventListener("click", () => {
-            if (updateForm) {
-                updateForm.classList.add("hidden");
-            }
+            updateForm.classList.add("hidden");
             currentUpdateId = null;
         });
     }

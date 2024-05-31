@@ -1,0 +1,400 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.top-bar{
+    width: 100vw;
+    display: flex;
+    height: 50px;
+    background:red;
+    color: aliceblue;
+    
+}
+.top-title{
+    width: 40%;
+    background-color: aliceblue;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+.mylist ul li{
+   list-style: none;
+   display: inline-block;
+   padding: 8px 12px;
+
+   
+}
+li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.body1{
+    background-image: linear-gradient(rgba(11,5,7,0.6),rgba(11,5,7,0.6)),url(images/700.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+.content1{
+    width: 50%;
+    font-size: 20px;
+}
+h1{
+    font-size: 4rem;
+}
+
+    
+    
+
+button:hover{
+    background-color: rgb(11,5,7);
+    border: none;
+}
+.fa{
+   margin-left: 10px;
+   font-size: 20px;
+}
+.body2{
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 100px;
+}
+.body2 img{
+    height: 100%;
+    width: 500px;
+}
+.about{
+    text-align: right;
+    margin-top: 10vh;
+    width: 40%;
+    
+}
+.about h3{
+    color: grey;
+}
+.about h2{
+    font-size: 40px;
+}
+.body3{
+    height: 100%;
+    width: 100VW;
+    background-color: papayawhip;
+    text-align: center;
+    color: aliceblue;
+    overflow-x: hidden;
+
+}
+.body4{
+    height: 60vh ;
+    width: 100vw;
+    background-color: rgb(11,5,7);
+    width: 100vw;
+    text-align: center;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.body4 h2{
+    font-size: 40px;
+}
+
+.body4 .icons{
+    margin-top: 50px;
+}
+li{
+    list-style: none;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    color: red;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.hidden{
+    height: 50%;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    color: aliceblue;
+    border: none;
+    font-size: 16px;
+    gap: 5%;
+
+    
+    
+}
+.hidden{
+    display:none;
+    
+}
+
+
+
+
+input[type="text"],input[type="date"]{
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    height: 40px;
+    border-bottom: 2px solid white;
+}
+.myproducts div img{
+    width: 200px;
+    height: 180px;
+
+}
+.products{
+    background-image: linear-gradient(rgba(11,5,7,0.8),rgba(11,5,7,0.8)),url(images/87.jpg); 
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.admin-buttons{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table{
+    background-color:transparent;
+    width: 100%;
+    height: 200px;
+    border-collapse: collapse;
+    margin-bottom: 100PX;
+    
+}
+table,thead,td{
+    border: 1px solid white;
+    padding: 5px;
+    
+}
+table button{
+    width: 100px;
+}
+
+
+.sub-hidden{
+    width: 100%;
+     display: flex;
+     background-color: transparent;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.myproducts{
+    gap: 20px;
+    width: 100%;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+.myproducts div{
+    background-color: #f0f8ff;
+    color: #000;
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    box-shadow: 2px solid black;
+    border-radius: 10px;
+    
+}
+.myproducts div button{
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    color: aliceblue;
+    border: none;
+
+
+}
+.myproducts div button:hover{
+    background-color: green;
+}
+.myproducts div h3{
+    color: red;
+
+}
+@media screen and (max-width: 400px) {
+    .content1{
+        font-size: 16px;
+    }
+    .content1 h1{
+        font-size: 30px;
+    }
+    .body1{
+        background-position: center;
+        background-position: cover;
+    }
+    li {
+        font-size: 10px;
+        margin: 0px; 
+    }
+
+    .top-title{
+       display: flex;
+       
+    }
+    .body2{
+        width: 100vw;
+        flex-direction: column;
+        text-align: center;
+    }
+    .body2 img{
+        width: 100vw;
+        gap: 20px;
+    }
+    .about{
+        text-align: center;
+        width: 100%;
+    }
+    .sub-hidden{
+        flex-direction: column;
+    }
+    table{
+        width: 100%;
+    }
+    input[type="text"],input[type="datetime"]{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .content1{
+        font-size: 16px;
+    }
+    .content1 h1{
+        font-size: 30px;
+    }
+    .body1{
+        background-position: center;
+        background-position: cover;
+    }
+    li {
+        font-size: 10px;
+        margin: 0px; 
+    }
+
+    .top-title{
+       display: flex;
+       
+    }
+    .body2{
+        width: 100vw;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .body2 img{
+        width: 100vw;
+        gap: 20px;
+    }
+    .about{
+        text-align: center;
+        width: 100%;
+    }
+    .sub-hidden{
+        flex-direction: column;
+    }
+    table{
+        width: 100%;
+    }
+}
+
+.cartproducts{
+    width: 100%;
+    background-color:transparent;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cartproducts h3{
+    font-size: 40px;
+    color: red;
+}
+.cartitems{
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    color: red;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+
+}
+.cartitems div{
+  background-color:papayawhip;
+  width: 20%;
+  height: 90%;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  
+}
+.cartitems div button{
+    background-color: green;
+    border: none;
+    color: white;
+}
+.cartitems div button:hover{
+    background-color: red;
+}
+.cartitems div img{
+    width: 100%;
+    height: 60%;
+}

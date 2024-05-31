@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMART-TECK</title>
+    <title>cart--SMART-TECK</title>
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
     rel="stylesheet"  type='text/css'>
@@ -17,58 +17,24 @@
             </div>
             <div class="mylist">
             <ul>
-                <li><a href="#HOME">HOME</a></li>
-                <li><a href="#ABOUT">ABOUT</a></li>
-                <li><a href="#PRODUCTS">PRODUCTS</a></li>
-                <li><a href="#CONTACTS">CONTACTS</a></li>
-                <a href="#PRODUCTS"><Button id="cartbtn">ADD TO CART</Button></a>
+                <li><a href="index.html">HOME</a></li>
+               
+              
                 
             </ul>
         </div>
         </div>
-        <div class="body1">
-            <div class="content1">
-                <a name="HOME"><h1>All New Phones up to 25% Flat Sale</h1></a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium cum accusamus voluptate laudantium tempora mollitia! Voluptas vel placeat velit eum labore dicta ducimus
-                s aperiam reprehenderit, doloremque vitae quas minus iste!</p>
-            </div>
-            <a href="#PRODUCTS"><button>Buy Now</button></a>
-            <div class="icon">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-linkedin"></i>
-            </div>
-        </div>
-        <div class="body2">
-            <div class="image1">
-               <img src="images/6.png" alt="">
-            </div>
-            <div class="about">
-                <a name="ABOUT"><h3>About Us</h3></a>
-                <h2>Our Mobile Shop</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt commodi ab sunt nulla reiciendis adipisci ratione excepturi? Ab fuga pariatur 
-                    nesciunt culpa delectus repellat, sed ipsam tempore. Quae, aspernatur animi
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt commodi ab sunt nulla reiciendis adipisci ratione excepturi? Ab fuga pariatur 
-                    nesciunt culpa delectus repellat, sed ipsam tempore. Quae, aspernatur animi
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt commodi ab sunt nulla reiciendis adipisci ratione excepturi? Ab fuga pariatur 
-                    nesciunt culpa delectus repellat, sed ipsam tempore. Quae, aspernatur animi.
-                </p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt commodi ab sunt nulla reiciendis adipisci ratione excepturi? Ab fuga pariatur 
-                nesciunt culpa delectus repellat, sed ipsam tempore. Quae, aspernatur animi
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt commodi ab sunt nulla reiciendis adipisci ratione excepturi? Ab fuga pariatur 
-                nesciunt culpa delectus repellat, sed ipsam tempore. Quae, aspernatur animi
-            </div>
-        </div>
         <div class="body3">
             <div class="products">
-                <a name="PRODUCTS"><h1>products</h1></a>
-                <div class="admin-buttons">
-                    <a href="admin.html"><button id="admin-button">Admin</button></a>
+                <a name="PRODUCTS"><h1>Welcome to the cart</h1></a>
+                <div class="cartproducts">
+                    <h3>TAP On item to Buy</h3>
+                    <div class="cartitems">
+                        
+                    </div>
                 </div>
                 <div class="admin-buttons">
-                    <a href="cart.html"><button id="admin-button">VISIT CART</button></a>
+                    <a href="index.html"><button id="admin-button">SEE MORE</button></a>
                 </div>
                 <div class="hidden">
                     <div class="sub-hidden">
@@ -88,6 +54,10 @@
                             <div class="inp4">
                                 <label for="product-image">Product Image URL</label>
                                 <input type="text" id="product-image" placeholder="image-url">
+                            </div>
+                            <div class="inp5">
+                                <label for="product-decr">Product DOM</label>
+                                <input type="text" id="product-descr">
                             </div>
                             <button type="submit" id="submit-button">Create</button>
                         </form>
@@ -159,8 +129,6 @@
                 </div>
             </ul>
         </div>
-        </div>
-    </div>
-    <script src="dist/index.js"></script>
-</body>
-</html>
+        <script src="dist/cart.js"></script>
+    </body>
+    </html>
